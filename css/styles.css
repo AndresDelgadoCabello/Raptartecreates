@@ -36,6 +36,9 @@ header{
     background-image: url(../resources/logo-raptarte.png);
     background-size: auto;
 }
+.header{
+    background-color: white
+}
 ul{
     padding: 0 16px;
     list-style: none;
@@ -88,9 +91,14 @@ main{
     border: solid 10px;
     border-radius: 15px;
 }
+
 button:hover{
     background-color: wheat;
     transform: scale(1.05,1.05)
+}
+.btn__color{
+background-color: white;
+color: black;
 }
 
 .main__yt{
@@ -117,14 +125,14 @@ button:hover{
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-.main__galery
-
-
-.contact{
-    color: white;
-    text-align: center;
-
+/* galeria */
+.carrousel__galeria{
+    height:500px;
+    width:300px;
 }
+
+
+
 ol{
     color: white;
 }
