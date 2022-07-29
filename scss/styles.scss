@@ -36,34 +36,34 @@ header{
     background-image: url(../resources/logo-raptarte.png);
     background-size: auto;
 }
-.header{
-    background-color: white
-}
 ul{
     padding: 0 16px;
     list-style: none;
 }
-.header__nav{
-    display: flex;
-    flex-wrap: wrap;
-}
-.header__list{
-    display: flex;
-    flex-wrap: wrap;
+.header{
+    background-color: white
+
+    }
+    .header__list{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .header__item{
+        padding: 20px;
+    }
+    
+    .header__item a{
+        color: white;
+        text-decoration: none;
+    }
+    .header__item:hover {
+        transform: scale(1.20,1.20);
+        transition: all 2s;
 }
 
-.header__item{
-    padding: 20px;
-}
 
-.header__item a{
-    color: white;
-    text-decoration: none;
-}
-.header__item:hover {
-    transform: scale(1.20,1.20);
-    transition: all 2s;
-}
+
 main{
     background-color: black;
 }
@@ -180,8 +180,58 @@ ol{
 .galery__img{
     width: 75%;
 }
+.footer{    
+    width:100%;
+    background-color: rgb(8, 5, 5);
 
-footer{
-    background-color: black;
-    text-align: center;
+    .footer__pie{
+        display:grid;
+        width:100%;
+        max-width:1200%;
+        margin:auto;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap:50px;
+        padding:45px 0px;
+    }
+    .footer__logo{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer__logo img{
+        width: 250px;
+    }
+    .footer__text h2{
+        color: white;
+        margin-bottom: 25px;
+        font-size: 20px;
+    }
+    .footer__text p{
+        color: #efefef;
+        margin-bottom: 10px;
+    }
+    .footer__redes a{
+        display: inline-block;
+        text-decoration: none;
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        color: #efefef;
+        margin-right: 10px;
+        background-color: purple;
+        text-align: center;
+        transition: all 300ms ease;
+    }
+    .footer__redes a:hover{
+        color: black;
+    }
+    .footer__derechos{
+        background-color: black;
+        padding: 15px 10px;
+        text-align: center;
+        color: white;
+    }
 }
+

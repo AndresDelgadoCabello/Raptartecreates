@@ -31,16 +31,12 @@ header {
   background-image: url(../resources/logo-raptarte.png);
   background-size: auto; }
 
-.header {
-  background-color: white; }
-
 ul {
   padding: 0 16px;
   list-style: none; }
 
-.header__nav {
-  display: flex;
-  flex-wrap: wrap; }
+.header {
+  background-color: white; }
 
 .header__list {
   display: flex;
@@ -162,6 +158,47 @@ ol {
 .galery__img {
   width: 75%; }
 
-footer {
-  background-color: black;
-  text-align: center; }
+.footer {
+  width: 100%;
+  background-color: #080505; }
+  .footer .footer__pie {
+    display: grid;
+    width: 100%;
+    max-width: 1200%;
+    margin: auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px; }
+  .footer .footer__logo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .footer .footer__logo img {
+    width: 250px; }
+  .footer .footer__text h2 {
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px; }
+  .footer .footer__text p {
+    color: #efefef;
+    margin-bottom: 10px; }
+  .footer .footer__redes a {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #efefef;
+    margin-right: 10px;
+    background-color: purple;
+    text-align: center;
+    transition: all 300ms ease; }
+  .footer .footer__redes a:hover {
+    color: black; }
+  .footer .footer__derechos {
+    background-color: black;
+    padding: 15px 10px;
+    text-align: center;
+    color: white; }
