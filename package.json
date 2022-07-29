@@ -1,0 +1,25 @@
+{
+  "name": "raptarcreates",
+  "version": "1.0.0",
+  "description": "<h1> Raptarte Creates</h1>\r <p> este sitio es para un estudio de musica,ademas de servir para un curso de desarrollo web </p>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/styles.scss css/styles.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndresDelgadoCabello/Raptarcreates.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndresDelgadoCabello/Raptarcreates/issues"
+  },
+  "homepage": "https://github.com/AndresDelgadoCabello/Raptarcreates#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.19"
+  }
+}
