@@ -1,6 +1,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 body{
     background-color: black;
@@ -156,7 +157,7 @@ ol{
 
 // footer //
 
-.footer{    
+.footer{
     width:100%;
     background-color: rgb(22, 21, 21);
 
@@ -212,6 +213,15 @@ ol{
         color: white;
     }
 }
+@media screen and (max-width:800px){
+    .footer__pie{
+        width: 90%;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+}
+
 
 // contactos //
 
@@ -297,12 +307,6 @@ ol{
 .header__logo{
     float: left;
 }
-.header__logo h1{
-    color: white;
-    font-weight: 400;
-    font-size: 24px;
-    cursor: default;
-}
 .header__menu a{
 color: white;
 text-decoration: none;
@@ -315,6 +319,90 @@ border-bottom: 4px purple;
 .header__menu a:hover{
     color: purple;
 
+}
+#boton__menu{
+    display: none;
+}
+.header__boton{
+    float: right;
+    display: none;
+
+}
+.header__boton label{
+    color: white;
+    background: rgb(22, 21, 21);
+    padding: 1px;
+    font-size: 13px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+    .header{
+        height: 60px;
+    }
+    .header__logo, .header__boton{
+        line-height: 60px;
+    }
+    .header__menu{
+        position: absolute;
+        background: black;
+        width:100%;
+        height: 100vh;
+        top: 60px;
+        left: 0;
+        transition: all 500ms ease;
+        transform: translateX(-100%)
+    }
+    #boton__menu:checked ~ .header__menu{
+        transform: translateX(0%)
+    }
+    .header__menu a{
+        display:block;
+        margin-top: 10px;
+    }
+.header__boton{
+    display: block;
+}
+}
+
+// galeria
+
+.galeria__principal{
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 250px;
+    grid-gap: 20px;
+}
+.galeria__imagenes figure{
+    width: 100%;
+    height: 100%;
+}
+.galeria__imagenes img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media screen and (max-width:800px){
+    .galeria__principal{
+        width: 95%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        grid-template-rows: 200px;
+    }
+}
+@media screen and (max-width:500px){
+    .galeria__principal{
+        width: 90%;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .galeria__imagenes img{
+        height: 200px;
+    }
 }
 
 
