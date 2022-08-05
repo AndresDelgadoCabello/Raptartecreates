@@ -1,3 +1,5 @@
+@import "operators";
+
 *{
     margin: 0px;
     padding: 0px;
@@ -9,7 +11,6 @@ body{
 
 h1{
     color: white;
-    background-color: black;
 }
 
 h2{
@@ -99,11 +100,7 @@ color: black;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-/* galeria */
-.carrousel__galeria{
-    height:500px;
-    width:300px;
-}
+
 
 
 
@@ -120,7 +117,7 @@ ol{
     width:100%;
     background-color: rgb(22, 21, 21);
 
-    .footer__pie{
+    &__pie{
         display:grid;
         width:100%;
         max-width:1200%;
@@ -129,28 +126,28 @@ ol{
         grid-gap:50px;
         padding:45px 0px;
     }
-    .footer__logo{
-        width: 100%;
-        height: 100%;
+    &__logo{
+        @extend .tamaño-centrado;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .footer__logo img{
+    &__logo img{
         width: 250px;
     }
-    .footer__text h2{
+    &__text h2{
         color: white;
         background-color:  rgb(22, 21, 21);;
         margin-bottom: 25px;
         font-size: 20px;
     }
-    .footer__text p{
+    &__text p{
         color: #efefef;
         margin-bottom: 10px;
         background-color:  rgb(22, 21, 21);;
+        font-size: 15px;
     }
-    .footer__redes a{
+    &__redes a{
         display: inline-block;
         text-decoration: none;
         width: 45px;
@@ -162,10 +159,10 @@ ol{
         text-align: center;
         transition: all 300ms ease;
     }
-    .footer__redes a:hover{
+    &__redes a:hover{
         color: black;
     }
-    .footer__derechos{
+    &__derechos{
         background-color: black;
         padding: 15px 10px;
         text-align: center;
@@ -193,16 +190,16 @@ ol{
     grid-gap: 50px;
     margin-top: 90px;
 
-    .contacto h2{
+    & h1{
         margin-bottom: 15px;
         font-size: 35px;
     }
-    .contacto p{
+    & p{
         font-size: 17px;
         line-height: 1.6;
         margin-bottom: 30px;
     }
-    .contacto__datos ,textarea{
+    &__datos ,textarea{
         width: 100%;
         padding: 15px 10px;
         font-size: 15px;
@@ -211,13 +208,13 @@ ol{
         border-radius: 3px;
         outline: 0px;
     }
-    .contacto__datos form textarea{
+    &__datos form textarea{
         max-width: 530px;
         min-width: 530px;
         min-height: 140px;
         max-height: 150px;
     }
-    .contacto__boton{
+    &__boton{
         padding: 15px;
         font-size: 16px;
         border: none;
@@ -229,71 +226,71 @@ ol{
         transition: all 300ms ease;
         margin-bottom: 30px;
     }
-    .contacto__boton :hover{
+    &__boton :hover{
         background: black;
     }
+    & a{
+        font-size: 17px;
+        display: inline-block;
+        text-decoration: none;
+        width: 100%;
+        margin-bottom: 15px;
+        color: white;
+        font-weight: 700;
+    }
+    & a i{
+        color: purple;
+        margin-right: 10px;
+    }
 }
-.contacto a{
-    font-size: 17px;
-    display: inline-block;
-    text-decoration: none;
-    width: 100%;
-    margin-bottom: 15px;
-    color: white;
-    font-weight: 700;
-}
-.contacto a i{
-    color: purple;
-    margin-right: 10px;
-}
+
 
 // cabezera //
 
 .header{
-    width: 100%;
-    height: 100%;
+    @extend .tamaño-centrado;
     background: rgb(22, 21, 21);;
     z-index: 10;
     top: 0;
     left: 0;
     position: sticky;
-}
-.header__container{
-    width: 90%;
-    max-width: 1200%;
-    margin: auto;
-}
-.header__logo{
-    float: left;
-}
-.header__menu a{
-color: white;
-text-decoration: none;
-display: inline-block;
-padding: 10px 15px;
-font-size: 14px;
-transition: all 500ms ease;
-border-bottom: 4px purple;
-}
-.header__menu a:hover{
-    color: purple;
 
+    &__container{
+        width: 90%;
+        max-width: 1200%;
+        margin: auto;
+    }
+    &__logo{
+        float: left;
+    }
+    &__menu a{
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 14px;
+    transition: all 500ms ease;
+    border-bottom: 4px purple;
+    }
+    &__menu a:hover{
+        color: purple;
+    }
+    &__boton{
+        float: right;
+        display: none;
+    }
+    &__boton label{
+        color: white;
+        background: rgb(22, 21, 21);
+        padding: 1px;
+        font-size: 13px;
+        border-radius: 3px;
+        cursor: pointer;
+    }
 }
+
 #boton__menu{
     display: none;
-}
-.header__boton{
-    float: right;
-    display: none;
-
-}
-.header__boton label{
-    color: white;
-    background: rgb(22, 21, 21);
-    padding: 1px;
-    font-size: 13px;
-    border-radius: 3px;
-    cursor: pointer;
 }
 @media only screen and (min-width:320px) and (max-width:768px){
     .header{
@@ -326,7 +323,7 @@ border-bottom: 4px purple;
 
 // galeria
 
-.galeria__principal{
+.galeria{
     width: 100%;
     max-width: 1100px;
     margin: auto;
@@ -336,16 +333,16 @@ border-bottom: 4px purple;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: 250px;
     grid-gap: 20px;
+
+    &__imagenes figure{
+        @extend .tamaño-centrado;
+    }
+    &__imagenes img{
+        @extend .tamaño-centrado;
+        object-fit: cover;
+    }
 }
-.galeria__imagenes figure{
-    width: 100%;
-    height: 100%;
-}
-.galeria__imagenes img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+
 @media screen and (max-width:800px){
     .galeria__principal{
         width: 95%;
@@ -363,58 +360,58 @@ border-bottom: 4px purple;
         height: 200px;
     }
 }
+
 // inicio
 
 .principal{
     width: 100%;
     height: 600px;
     position: relative;
-}
-.principal__portada{
-    width: 100%;
-    height: 100%;
-    background: url(../resources/logo-raptarte.png);
-    background-attachment: fixed;
-}
-.principal__contenido{
-    top: 0;
-    left: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.principal__info{
-    width: 100%;
-    max-width: 750px;
-    text-align: center;
-}
-.principal__info h1{
-    color: #fff;
-    font-size: 50px;
-    text-shadow: 0px 1px 10px rgba($color: #000000, $alpha: 1.0);
-    margin-bottom: 25px;
-    letter-spacing: 1px;
-}
-.principal__info a{
-    display: inline-block;
-    text-decoration: none;
-    font-size: 19px;
-    padding: 10px 25px;
-    color: #fff;
-    background: purple;
-    border-radius: 50px;
-    margin-bottom: 40px;
-    border: 2px solid transparent;
-    transition: all 30ms ease;
-    letter-spacing: 0.5px;
-}
-.principal__info a:hover{
-    background: black;
-    border: 2px solid #fff;
 
+    &__portada{
+        @extend .tamaño-centrado;
+        background: url(../resources/logo-raptarte.png);
+        background-attachment: fixed;
+    }
+    &__contenido{
+        top: 0;
+        left: 0;
+        position: absolute;
+        @extend .tamaño-centrado;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__info{
+        width: 100%;
+        max-width: 750px;
+        text-align: center;
+    }
+    &__info h1{
+        color: #fff;
+        font-size: 50px;
+        text-shadow: 0px 1px 10px rgba($color: #000000, $alpha: 1.0);
+        margin-bottom: 25px;
+        letter-spacing: 1px;
+    }
+    &__info a{
+        display: inline-block;
+        text-decoration: none;
+        font-size: 19px;
+        padding: 10px 25px;
+        color: #fff;
+        background: purple;
+        border-radius: 50px;
+        margin-bottom: 40px;
+        border: 2px solid transparent;
+        transition: all 30ms ease;
+        letter-spacing: 0.5px;
+    }
+    &__info a:hover{
+        background: black;
+        border: 2px solid #fff;
+    }
 }
+
 
 

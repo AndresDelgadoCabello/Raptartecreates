@@ -1,3 +1,8 @@
+@charset "UTF-8";
+.tamaño-centrado, .footer__logo, .header, .galeria__imagenes figure, .galeria__imagenes img, .principal__portada, .principal__contenido {
+  width: 100%;
+  height: 100%; }
+
 * {
   margin: 0px;
   padding: 0px;
@@ -7,8 +12,7 @@ body {
   background-color: black; }
 
 h1 {
-  color: white;
-  background-color: black; }
+  color: white; }
 
 h2 {
   color: white;
@@ -91,11 +95,6 @@ button:hover {
   flex-wrap: wrap;
   justify-content: space-evenly; }
 
-/* galeria */
-.carrousel__galeria {
-  height: 500px;
-  width: 300px; }
-
 ol {
   color: white; }
 
@@ -105,7 +104,7 @@ ol {
 .footer {
   width: 100%;
   background-color: #161515; }
-  .footer .footer__pie {
+  .footer__pie {
     display: grid;
     width: 100%;
     max-width: 1200%;
@@ -113,24 +112,23 @@ ol {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 50px;
     padding: 45px 0px; }
-  .footer .footer__logo {
-    width: 100%;
-    height: 100%;
+  .footer__logo {
     display: flex;
     justify-content: center;
     align-items: center; }
-  .footer .footer__logo img {
+  .footer__logo img {
     width: 250px; }
-  .footer .footer__text h2 {
+  .footer__text h2 {
     color: white;
     background-color: #161515;
     margin-bottom: 25px;
     font-size: 20px; }
-  .footer .footer__text p {
+  .footer__text p {
     color: #efefef;
     margin-bottom: 10px;
-    background-color: #161515; }
-  .footer .footer__redes a {
+    background-color: #161515;
+    font-size: 15px; }
+  .footer__redes a {
     display: inline-block;
     text-decoration: none;
     width: 45px;
@@ -141,9 +139,9 @@ ol {
     background-color: purple;
     text-align: center;
     transition: all 300ms ease; }
-  .footer .footer__redes a:hover {
+  .footer__redes a:hover {
     color: black; }
-  .footer .footer__derechos {
+  .footer__derechos {
     background-color: black;
     padding: 15px 10px;
     text-align: center;
@@ -164,14 +162,14 @@ ol {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 50px;
   margin-top: 90px; }
-  .contacto .contacto h2 {
+  .contacto h1 {
     margin-bottom: 15px;
     font-size: 35px; }
-  .contacto .contacto p {
+  .contacto p {
     font-size: 17px;
     line-height: 1.6;
     margin-bottom: 30px; }
-  .contacto .contacto__datos, .contacto textarea {
+  .contacto__datos, .contacto textarea {
     width: 100%;
     padding: 15px 10px;
     font-size: 15px;
@@ -179,12 +177,12 @@ ol {
     margin-bottom: 20px;
     border-radius: 3px;
     outline: 0px; }
-  .contacto .contacto__datos form textarea {
+  .contacto__datos form textarea {
     max-width: 530px;
     min-width: 530px;
     min-height: 140px;
     max-height: 150px; }
-  .contacto .contacto__boton {
+  .contacto__boton {
     padding: 15px;
     font-size: 16px;
     border: none;
@@ -195,65 +193,55 @@ ol {
     cursor: pointer;
     transition: all 300ms ease;
     margin-bottom: 30px; }
-  .contacto .contacto__boton :hover {
+  .contacto__boton :hover {
     background: black; }
-
-.contacto a {
-  font-size: 17px;
-  display: inline-block;
-  text-decoration: none;
-  width: 100%;
-  margin-bottom: 15px;
-  color: white;
-  font-weight: 700; }
-
-.contacto a i {
-  color: purple;
-  margin-right: 10px; }
+  .contacto a {
+    font-size: 17px;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    margin-bottom: 15px;
+    color: white;
+    font-weight: 700; }
+  .contacto a i {
+    color: purple;
+    margin-right: 10px; }
 
 .header {
-  width: 100%;
-  height: 100%;
   background: #161515;
   z-index: 10;
   top: 0;
   left: 0;
   position: sticky; }
-
-.header__container {
-  width: 90%;
-  max-width: 1200%;
-  margin: auto; }
-
-.header__logo {
-  float: left; }
-
-.header__menu a {
-  color: white;
-  text-decoration: none;
-  display: inline-block;
-  padding: 10px 15px;
-  font-size: 14px;
-  transition: all 500ms ease;
-  border-bottom: 4px purple; }
-
-.header__menu a:hover {
-  color: purple; }
+  .header__container {
+    width: 90%;
+    max-width: 1200%;
+    margin: auto; }
+  .header__logo {
+    float: left; }
+  .header__menu a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 14px;
+    transition: all 500ms ease;
+    border-bottom: 4px purple; }
+  .header__menu a:hover {
+    color: purple; }
+  .header__boton {
+    float: right;
+    display: none; }
+  .header__boton label {
+    color: white;
+    background: #161515;
+    padding: 1px;
+    font-size: 13px;
+    border-radius: 3px;
+    cursor: pointer; }
 
 #boton__menu {
   display: none; }
-
-.header__boton {
-  float: right;
-  display: none; }
-
-.header__boton label {
-  color: white;
-  background: #161515;
-  padding: 1px;
-  font-size: 13px;
-  border-radius: 3px;
-  cursor: pointer; }
 
 @media only screen and (min-width: 320px) and (max-width: 768px) {
   .header {
@@ -277,7 +265,7 @@ ol {
   .header__boton {
     display: block; } }
 
-.galeria__principal {
+.galeria {
   width: 100%;
   max-width: 1100px;
   margin: auto;
@@ -287,15 +275,8 @@ ol {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 250px;
   grid-gap: 20px; }
-
-.galeria__imagenes figure {
-  width: 100%;
-  height: 100%; }
-
-.galeria__imagenes img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; }
+  .galeria__imagenes img {
+    object-fit: cover; }
 
 @media screen and (max-width: 800px) {
   .galeria__principal {
@@ -315,48 +296,38 @@ ol {
   width: 100%;
   height: 600px;
   position: relative; }
-
-.principal__portada {
-  width: 100%;
-  height: 100%;
-  background: url(../resources/logo-raptarte.png);
-  background-attachment: fixed; }
-
-.principal__contenido {
-  top: 0;
-  left: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-.principal__info {
-  width: 100%;
-  max-width: 750px;
-  text-align: center; }
-
-.principal__info h1 {
-  color: #fff;
-  font-size: 50px;
-  text-shadow: 0px 1px 10px black;
-  margin-bottom: 25px;
-  letter-spacing: 1px; }
-
-.principal__info a {
-  display: inline-block;
-  text-decoration: none;
-  font-size: 19px;
-  padding: 10px 25px;
-  color: #fff;
-  background: purple;
-  border-radius: 50px;
-  margin-bottom: 40px;
-  border: 2px solid transparent;
-  transition: all 30ms ease;
-  letter-spacing: 0.5px; }
-
-.principal__info a:hover {
-  background: black;
-  border: 2px solid #fff; }
+  .principal__portada {
+    background: url(../resources/logo-raptarte.png);
+    background-attachment: fixed; }
+  .principal__contenido {
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .principal__info {
+    width: 100%;
+    max-width: 750px;
+    text-align: center; }
+  .principal__info h1 {
+    color: #fff;
+    font-size: 50px;
+    text-shadow: 0px 1px 10px black;
+    margin-bottom: 25px;
+    letter-spacing: 1px; }
+  .principal__info a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 19px;
+    padding: 10px 25px;
+    color: #fff;
+    background: purple;
+    border-radius: 50px;
+    margin-bottom: 40px;
+    border: 2px solid transparent;
+    transition: all 30ms ease;
+    letter-spacing: 0.5px; }
+  .principal__info a:hover {
+    background: black;
+    border: 2px solid #fff; }
