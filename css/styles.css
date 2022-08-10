@@ -331,3 +331,48 @@ ol {
   .principal__info a:hover {
     background: black;
     border: 2px solid #fff; }
+
+.proyectos {
+  width: 100%;
+  max-width: 1300px;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 100px; }
+  .proyectos__acordeon {
+    background: #161515; }
+  .proyectos__acordeon label {
+    display: block;
+    padding: 20px;
+    font-size: 20px;
+    background: purple;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 2px;
+    transition: all 300ms ease; }
+  .proyectos__acordeon label:hover {
+    background: #2e2e2e; }
+  .proyectos__contenido {
+    padding: 0px;
+    margin: 0px 20px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 300ms ease; }
+  .proyectos__contenido p {
+    font-size: medium; }
+
+.proyectos h1 {
+  font-family: 'Yellowtail', cursive;
+  text-align: center;
+  font-size: 100px;
+  margin-bottom: 35px; }
+
+.btn-acordeon:checked ~ .proyectos__contenido {
+  max-height: 600px;
+  padding: 15px 0px; }
+
+.btn-acordeon {
+  display: none; }
+
+@media screen and (max-width: 900px) {
+  .proyectos__acordeon {
+    width: 90%; } }
