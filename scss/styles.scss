@@ -398,6 +398,14 @@ ol{
         text-shadow: 0px 1px 10px rgba($color: #000000, $alpha: 1.0);
         margin-bottom: 25px;
         letter-spacing: 1px;
+
+/* From https://css.glass */
+background: rgba(1, 1, 1, 0.66);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(0px);
+-webkit-backdrop-filter: blur(0px);
+border: 1px solid rgba(1, 1, 1, 0.88);
     }
     &__info a{
         display: inline-block;
